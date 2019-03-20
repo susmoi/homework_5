@@ -23,6 +23,8 @@
       background-size: 100%;
       margin-bottom:25px;
       font-size: 150%;
+      font-family: sans-serif;
+
     }
     .preview{
         width:10%;
@@ -36,6 +38,7 @@
     h1{
         text-align: center;
     }
+
     </style>
 
     <script>
@@ -44,14 +47,24 @@
 function upDate(previewPic){
     var mousePicture = document.getElementById("image");
       mousePicture.style.backgroundImage = "url("+previewPic.src+")";
-      mousePicture.style.backgroundColor = "indianred";
+      mousePicture.style.backgroundColor = "#5BC0C4";
       mousePicture.innerHTML = previewPic.alt;
+
+    var focusOn = document.getElementById("image");
+      focusOn.style.backgroundImage = "url("+previewPic.src+")";
+      focusOn.style.backgroundColor = "#5BC0C4";
+      focusOn.innerHTML = previewPic.alt;
+
     	}
 
 function unDo(){
     var mouseOff = document.getElementById("image");
-    mouseOff.style.backgroundImage="url("+''+")";
-    mouseOff.innerHTML = "Hover over an image below to display here.";
+      mouseOff.style.backgroundImage="url("+''+")";
+      mouseOff.innerHTML = "Hover over an image below to display here.";
+
+    var focusOff = document.getElementById("image");
+      focusOff.style.backgroundImage="url("+''+")";
+      focusOff.innerHTML = "Hover over an image below to display here.";
 }
 
     </script>
@@ -60,51 +73,63 @@ function unDo(){
 <body>
     <h1>Challenge 5</h1>
         <div id = "image">
-            Hover or tab over/into an image below.
+            <p>Hover or tab over/into an image below.</p>
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "night sky and tree"
             src = "images/rainbow_star_trail.jpg"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "nebula"
             src = "images/nebula.jpg"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "Girl smiling in front of usa flags"
             src = "images/AOC_NDP.png"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "Statue of famous tennis player"
             src = "images/richmond_arthur_ashe.jpg"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "picture of building with milk glass as part of building"
             src = "images/richmond_dairy.jpg"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
         <img class = "preview"
-            tabindex = "1"
+            tabindex = "0"
             alt = "Two houses on a hill."
             src = "images/richmond_house_churchhill.jpg"
             onmouseover = "upDate(this)"
-            onmouseout = "unDo()">
+            onmouseout = "unDo()"
+            onfocus = "upDate(this)"
+            onclur = "unDo()">
 
 </body>
 </html>
