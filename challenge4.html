@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+      line-height:400px;
+      width: 60%;
+      height: 60%;
+      border:5px solid black;
+      margin:0 auto;
+      background-color: #8e68ff;
+      background-image: url('');
+      background-repeat: no-repeat;
+      color:#FFFFFF;
+      text-align: center;
+      background-size: 100%;
+      margin-bottom:25px;
+      font-size: 150%;
+    }
+    .preview{
+        width:10%;
+        height: 10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+function upDate(previewPic){
+    var mousePicture = document.getElementById("image");
+      mousePicture.style.backgroundImage = "url("+previewPic.src+")";
+      mousePicture.style.backgroundColor = "indianred";
+      mousePicture.innerHTML = previewPic.alt;
+    	}
+
+function unDo(){
+    var mouseOff = document.getElementById("image");
+    mouseOff.style.backgroundImage="url("+''+")";
+    mouseOff.innerHTML = "Hover over an image below to display here.";
+}
+
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            tabindex = "1"
+            alt = "night sky and tree"
+            src = "images/rainbow_star_trail.jpg"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+        <img class = "preview"
+            tabindex = "1"
+            alt = "nebula"
+            src = "images/nebula.jpg"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+        <img class = "preview"
+            tabindex = "1"
+            alt = "Girl smiling in front of usa flags"
+            src = "images/AOC_NDP.png"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+        <img class = "preview"
+            tabindex = "1"
+            alt = "Statue of famous tennis player"
+            src = "images/richmond_arthur_ashe.jpg"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+        <img class = "preview"
+            tabindex = "1"
+            alt = "picture of building with milk glass as part of building"
+            src = "images/richmond_dairy.jpg"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+        <img class = "preview"
+            tabindex = "1"
+            alt = "Two houses on a hill."
+            src = "images/richmond_house_churchhill.jpg"
+            onmouseover = "upDate(this)"
+            onmouseout = "unDo()">
+
+</body>
+</html>
